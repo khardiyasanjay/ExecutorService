@@ -4,10 +4,12 @@ import java.util.concurrent.*;
 
 public class ParallelDataRetrievalAsSoonAnyTaskDone {
     public static void main(String[] args) {
-//        If you want to process the results from Future objects as they become available,
-//        rather than waiting for all tasks to complete, you can use the ExecutorCompletionService class.
-//        This class allows you to submit tasks to an ExecutorService and retrieve completed tasks in
-//        the order they finish.
+        /**
+        * If you want to process the results from Future objects as they become available,
+        * rather than waiting for all tasks to complete, you can use the ExecutorCompletionService class.
+        * This class allows you to submit tasks to an ExecutorService and retrieve completed tasks in
+        * the order they finish.
+         */
 
 
         ExecutorService executorService = Executors.newFixedThreadPool(5); // Create a thread pool with 5 threads
