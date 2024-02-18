@@ -1,0 +1,7 @@
+The Runnable interface is a functional interface introduced in
+    Java 1.0 and is located in the java.lang package.
+It contains a single run() method, which does not return any
+    value and does not throw checked exceptions (except for runtime exceptions).
+Runnable tasks are typically used with the Thread class by passing
+    an instance of Runnable to the Thread constructor.
+Since Java 8, Runnable can be used with lambda expressions and method references.

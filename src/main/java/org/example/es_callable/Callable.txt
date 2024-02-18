@@ -1,0 +1,10 @@
+The Callable interface was introduced in Java 5 as part of
+    the java.util.concurrent package.
+It is a parameterized interface with a type parameter representing
+    the type of result returned by the call() method.
+The call() method returns a result and can throw checked exceptions,
+    allowing more flexibility compared to Runnable.
+Callable tasks are typically used with ExecutorService, which can manage
+    the execution of tasks and provide features like thread pooling,
+    task scheduling, and asynchronous execution.
+Since Java 8, Callable can also be used with lambda expressions and method references.

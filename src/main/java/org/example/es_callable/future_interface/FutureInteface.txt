@@ -1,0 +1,24 @@
+The Future interface in Java is closely related to the Callable interface,
+    and it's used to represent the result of an asynchronous computation,
+    typically returned by Callable tasks submitted to an ExecutorService.
+    Here's the breakdown of its use:
+
+Asynchronous Computation:
+When you submit a Callable task to an ExecutorService, it returns a Future
+    object immediately, representing the task's future result.
+    The Future object allows you to track the progress of the computation
+    and retrieve the result once it's available.
+
+Result Retrieval:
+You can use the get() method of the Future interface to retrieve the result of the computation.
+If the computation is not yet complete when you call get(), the method will block until the result is available.
+If the computation encountered an exception, get() will throw an ExecutionException, which wraps the original exception thrown by the Callable task.
+
+Cancellation:
+The Future interface provides a cancel() method to cancel the associated computation.
+If the computation has not started yet, it may be cancelled, and subsequent calls to get() will throw a CancellationException.
+If the computation has already started, the cancel() method may attempt to interrupt the task depending on the ExecutorService implementation.
+
+Completion Checking:
+You can check if the computation has completed using the isDone() method of the Future interface.
+This method returns true if the computation has completed, either normally, exceptionally, or via cancellation.
